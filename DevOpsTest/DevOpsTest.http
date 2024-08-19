@@ -1,6 +1,0 @@
-@DevOpsTest_HostAddress = http://localhost:5299
-
-GET {{DevOpsTest_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
