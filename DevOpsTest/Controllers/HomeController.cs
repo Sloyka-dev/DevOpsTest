@@ -22,7 +22,7 @@ public class HomeController : ControllerBase
     {
 
         var id = _dataService.SetText(text);
-        return Ok(id.ToString());
+        return Ok($"Id of message: {id.ToString()}");
 
     }
 
@@ -32,8 +32,8 @@ public class HomeController : ControllerBase
 
         var text = _dataService.GetText(id);
 
-        if(text is null) return NotFound();
-        return Ok(text);
+        if(text is null) return NotFound("Message not found on server!");
+        return Ok($"Message is {text}");
 
     }
 
